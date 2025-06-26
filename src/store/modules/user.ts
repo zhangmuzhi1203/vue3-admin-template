@@ -14,6 +14,7 @@ export const useUserStore = defineStore("user", () => {
   token.value = GET_TOKEN();
   const avatar = ref<string>("");
   const username = ref<string>("");
+  const buttons = ref<string[]>([]);
   //用于过滤当前用户需要展示的异步路由
   function filterAsyncRoute(asnycRoute: any, routes: any) {
     return asnycRoute.filter((item: any) => {
@@ -46,6 +47,7 @@ export const useUserStore = defineStore("user", () => {
     routeList,
     avatar,
     username,
+    buttons,
     getUserInfo,
   };
 });
